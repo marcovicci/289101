@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+#nav {
+    text-align: center;
+    background-color: #67bb99;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    word-spacing: 1rem;
+    border-bottom: 3px #448877 dashed;
+}
+
+#header {
+    text-align: center;
+    padding: 10px;
+    background-image: url("img/illustration.gif"), url("img/texture.jpg");
+    height: 500px;
+    background-position: top center;
+    background-repeat: no-repeat, repeat;
+}
+
+#logo {
+    width: 400px;
+}
+
+#description, #date {
+    width: 250px;
+}
+
+.register_btn {
+    background-color: #ee4432;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px #aa4433 dashed;
+    padding: 10px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 700;
+    margin-top: 20px;
+}
