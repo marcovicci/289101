@@ -3,6 +3,9 @@
 body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
+    background-image: url("img/texture.jpg");
+    background-position: center;
+    background-repeat: repeat;
 }
 
 #nav {
@@ -18,10 +21,10 @@ body {
 #header {
     text-align: center;
     padding: 10px;
-    background-image: url("img/illustration.gif"), url("img/texture.jpg");
-    height: 500px;
+    background-image: url("img/illustration.gif");
+    height: 1000px;
     background-position: top center;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;
 }
 
 #logo {
@@ -43,4 +46,42 @@ body {
     color: white;
     font-weight: 700;
     margin-top: 20px;
+}
+
+#what {
+    background-color: #c7eeddcc;
+    margin-top: -350px;
+    padding: 10px;
+    color: #448877;
+}
+
+#what p {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0;
+}
+
+#sponsor_logos img {
+    width: 200px;
+}
+
+#sponsor_logos {
+    text-align: center;
+}
+
+#why {
+    background-color: #c7eedd;
+    padding: 10px;
+    color: #448877;
+}
+
+#why p {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
