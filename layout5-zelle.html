@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="utf-8" />
+       <title>Layout 5 - Zelle Edition</title>
+       <style>
+          div {
+               outline: 1px solid black;
+           }
+           #container {
+               /* Here's a comment, so it won't run any code but I can use it to leave notes :D */
+               display: grid;
+               grid-template-columns: 1fr 1fr 1fr;
+               margin: auto;
+               max-width: 800px;
+           }
+           #blue {
+               display: grid;
+               background-color: blue;
+               /* We've split #blue into 5 columns to make positioning .yellow easier */
+               grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+               height: 200px;
+               padding: 20px;
+               grid-column: 1/4;
+           }
+           #blue .yellow {
+               /* This ONLY styles the .yellow div inside of the #blue div */
+               background-color: yellow;
+               margin: 20px;
+               /* It starts and ends on the 5th column */
+               grid-column: 5/5;
+           }
+           .red {
+               /* This colors and gives height to both the .red divs */
+               background-color: red;
+               height: 400px;
+               padding: 20px;
+           }
+           .red + .red {
+               /* This ONLY styles the second .red that appears after the first .red */
+               display: grid;
+               /* It has columns AND rows. Fancy :D */
+               grid-template-columns: 1fr 1fr 1fr;
+               grid-template-rows: 1fr 1fr 1fr;
+               /* Plus, it's part of a grid itself, so it starts on the second column in that */
+               grid-column: 2/4;s
+            }
+           .red .yellow {
+               /* This ONLY styles the .yellow div inside of the .red div */
+               background-color: yellow;
+               margin: 20px;
+           }
+           .yellow + .yellow {
+               /* This ONLY styles the second .yellow that appears after the first .yellow */
+               /* Hey, I found the CSS that lets you just change the width and height without manual positioning! */
+               /* Setting grid-column to span 2 and grid-row to span 3 makes it take up the right space */
+               grid-column: span 2;
+               grid-row: span 3;
+               
+           }
+           #green {
+               /* This guy is chilling. We really don't need to do much with him. */
+              background-color: lime;
+               grid-column: 1/4;
+               height: 200px;
+           }
+           
+           .wide {
+               /* This class doesn't do anything. YET. But maybe it'll help you later. */
+           }
+           
+ </style>
+</head>
+<body>
+<div id="container">
+    <!-- HTML comments are formatted differently just to make things difficult. -->
+    <!-- But, just like CSS comments, anything inside them won't be run as code! -->
+    <div id="blue">
+        <div class="yellow"></div>
+    </div>
+    <div class="red"></div>
+    <div class="red">
+        <div class="yellow"></div>
+        <!-- Here I'm just demonstrating you can have two classes on one div, and that's fine. -->
+        <div class="yellow wide"></div> 
+    </div>
+    <div id="green"></div>
+</div>    
+       
+   </body>
+</html>
+<!-- Best of luck with the rest of the templates! -->
