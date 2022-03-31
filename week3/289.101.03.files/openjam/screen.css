@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+body {
+    font-family: Quicksand;
+    margin: 0;
+}
+
+#nav {
+    background-color: #67bb99;
+    text-align: center;
+    color: #ffffff;
+    padding: 30px;
+    border-bottom: 3px dashed #000;
+    font-weight: 700;
+    word-spacing: 20px;
+}
+
+#header {
+    padding: 20px;
+    text-align: center;
+    background-image: url("img/illustration.gif"), url("img/texture.jpg");
+    height: 600px;
+}
+
+#description, #date {
+    width: 300px;
+}
+
+.register_btn {
+    margin-bottom: 10px;
+}
+
+#logo {
+    width: 500px;
+}
+
+#what {
+    
+}
+
+#sponsor_logos {
+    
+}
+
+#why {
+    
+}
+
+#where {
+    
+}
+
+#when {
+    
+}
+
+#who {
+    
+}
+
+#footer {
+    
+}
