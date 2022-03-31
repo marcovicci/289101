@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <!-- Welcome to... -->
+        <title>Layout 7 Zelle Edition</title>
+        <!-- I've documented all the parts of this... document. It's definitely missing meta tags, etc.
+        BTW, this is an HTML comment. Anything inside these funny arrows doesn't get displayed. -->
+        <style>
+            
+            /* Meanwhile, this is a CSS comment, because things are never simple. 
+            Even the comments have differing syntax... :( why */
+        
+            /* I've made our container a fixed width and centered it. */
+            #container {
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0;
+            }
+            
+            /* All our divs will have an outline and a small minimum height so we can see them better.
+            Also, everything except the container above gets a little bit of padding. */
+            div {
+                border: solid 2px black;
+                min-height: 10px;
+                padding: 10px;
+            }
+            
+            .blue {
+                background-color: blue;
+            }
+
+            /* The red and green classes never need to be below a certain height 
+            so I've gone ahead and defined that here too. */
+            .red {
+                background-color: red;
+                height: 500px;
+            }
+
+            .green {
+                background-color: green;
+                height: 500px;
+            }
+
+            .yellow {
+                background-color: yellow;
+            }
+            
+            /* This extra class makes some of our yellow divs span across all the columns of the grid! */
+            .full-width {
+                grid-column: span 4;
+            }
+            
+            /* Optional: to make things look a bit more perfect, you could use a version 
+            for just those three-column grids as well. */
+            .three-width {
+                grid-column: span 3;
+            }
+            
+            /* Our header has two columns, of about 33% and 66% width. Or, 1/3 and 2/3. */
+            #header {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-column-gap: 10px;
+            }
+            
+            /* Here, I've defined column sizes AND row sizes to stop our full-width div 
+            from being quite as large as the divs below it. */
+            #team {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1.5fr;
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+            }
+            
+            /* Same deal, 4 columns. */
+            #gallery {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                height: 500px;
+            }
+            
+            /* Basically identical to #team */
+            #testimonials {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                grid-template-rows: 1fr 1.5fr;
+            }
+            
+            /* I've given this div three rows as well as three columns, to help shape its yellow divs. */
+            #location {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+            
+            /* I'm pretending the really big yellow div is like a Google Maps screenshot.
+            Here, we've told it to span two columns AND two rows in a grid. '*/
+            #map {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+        
+        </style>
+    </head>
+    
+    <body>
+    <!-- Hey, HTML comments are back! Putting things in a container div makes it feel cleaner to me. 
+    You might also notice I've spaced things out so it's really clear when things are inside of other things.-->
+    <div id="container">
+        
+        <div class="blue" id="header">
+            <!-- Blue header containing two yellows -->
+            
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+        
+        </div>
+        <!-- Green guy just chillin empty -->
+        <div class="green"></div>
+        <div class="red" id="team">
+            <!-- Red "team" div containing four yellows, the first one full-width -->
+            <div class="yellow full-width"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+        
+        
+        </div>
+        <div class="blue" id="gallery">
+            
+            <!-- Blue "Gallery" containing THIRTEEN yellow divs, and the first one is full-width -->
+            <div class="yellow full-width"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            
+        </div>
+        <div class="green" id="testimonials">
+            
+            <!-- Very similar setup to #team -->
+            <div class="yellow full-width"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+            <div class="yellow"></div>
+        
+        </div>
+        <div class="red" id="location">
+            
+            <!-- Two of our yellows here are so special! The last one is just kinda there -->
+            <div class="yellow full-width"></div>
+            <div class="yellow" id="map"></div>
+            <div class="yellow"></div>
+        
+        </div>
+        <!-- Another empty div. This would probably be your footer. -->
+        <div class="blue"></div>
+        
+    </div>
+    <!-- I closed off the container div just now. 
+    So if you put anything here, it'll work, but look super weird. Beware. -->
+    </body>
+
+</html>

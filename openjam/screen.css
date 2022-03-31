@@ -104,6 +104,10 @@ h1, h2 {
     width: 50px;
 }
 
+h3 {
+    border-top: 2px white dashed;
+}
+
 /* 
 
 body {
